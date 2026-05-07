@@ -92,103 +92,15 @@ I'm a passionate **Full Stack Developer** and **AI Engineer** based in India wit
 ---
 
 <!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
 
-<!-- GitHub Stats Section -->
-## 📊 GitHub Analytics
+```txt
+From: 29 April 2026 - To: 06 May 2026
 
-<div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=RahulRachhoya&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&count_private=true&include_all_commits=true&hide=issues" alt="GitHub Stats" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=RahulRachhoya&theme=github_dark&hide_border=true&background=0D1117" alt="GitHub Streak" />
-</div>
+Total Time: 0 secs
 
-<div align="center">
-  <img width="70%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RahulRachhoya&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&langs_count=8" alt="Top Languages" />
-</div>
+No activity tracked
+```
 
-<!-- GitHub Activity Graph -->
-<div align="center">
-  <br>
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=RahulRachhoya&theme=github-compact&bg_color=0D1117&color=00a8ff&line=00a8ff&point=fff&area_color=00a8ff&area=true&hide_border=true" alt="Activity Graph"/>
-</div>
-
----
-
-<!-- Featured Projects Section -->
-## 🚀 Featured Projects
-
-<div align="center">
-
-<table>
-<tr>
-<td width="50%">
-<h3 align="center">🤖 AI Agent OS</h3>
-<div align="center">
-<a href="https://github.com/RahulRachhoya/ai_agent_os" target="_blank">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=RahulRachhoya&repo=ai_agent_os&theme=github_dark&hide_border=true&bg_color=0D1117" alt="AI Agent OS"/>
-</a>
-<p>Multi-agent freelance automation platform targeting Indian market using LangGraph, CrewAI, and Django.</p>
-</div>
-</td>
-
-<td width="50%">
-<h3 align="center">💰 TradeKit</h3>
-<div align="center">
-<a href="https://github.com/RahulRachhoya/tradekit" target="_blank">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=RahulRachhoya&repo=tradekit&theme=github_dark&hide_border=true&bg_color=0D1117" alt="TradeKit"/>
-</a>
-<p>Real-time trading platform clone with WebSocket streams, order execution, and risk management.</p>
-</div>
-</td>
-</tr>
-
-<tr>
-<td width="50%">
-<h3 align="center">🎭 PromptForge</h3>
-<div align="center">
-<a href="https://github.com/RahulRachhoya/PromptForge" target="_blank">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=RahulRachhoya&repo=PromptForge&theme=github_dark&hide_border=true&bg_color=0D1117" alt="PromptForge"/>
-</a>
-<p>Open source contribution to modern web frameworks with TypeScript.</p>
-</div>
-</td>
-
-<td width="50%">
-<h3 align="center">🔊 AudioMuse AI</h3>
-<div align="center">
-<a href="https://github.com/RahulRachhoya/AudioMuse-AI" target="_blank">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=RahulRachhoya&repo=AudioMuse-AI&theme=github_dark&hide_border=true&bg_color=0D1117" alt="AudioMuse-AI"/>
-</a>
-<p>AI-powered music playlist generator using sonic analysis for Jellyfin, Navidrome, and Emby.</p>
-</div>
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-<!-- Open Source Section -->
-## 🌟 Open Source Contributions
-
-<div align="center">
-
-| 📦 **Project** | 🎯 **Contribution** | 🏷️ **Status** |
-|-------------|------------------|-------------|
-| [refinedev/refine](https://github.com/refinedev/refine) | Fixed biome formatting in auth-headless example | ✅ Merged |
-
-</div>
-
----
-
-<!-- Blog Posts Section (Auto-updated weekly) -->
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
-
----
-
-<!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
 
 <!-- Achievements Section -->
