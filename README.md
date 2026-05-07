@@ -61,14 +61,32 @@ I'm a passionate **Full Stack Developer** and **AI Engineer** based in India wit
 
 <div align="center">
 
-<!-- GitHub Stats using shields.io - more reliable than external services -->
+<!-- Using community-maintained instance (higher rate limits) -->
+<!-- Self-hosted option: https://github.com/RahulRachhoya/github-readme-stats -->
 
+<table>
+<tr>
+<td width="50%">
+<a href="https://github.com/RahulRachhoya">
+<img alt="GitHub Stats" src="https://github-readme-stats-git-masterrstaa-rickstaa-vercel.app/api?username=RahulRachhoya&show_icons=true&count_private=true&theme=github_dark&hide_border=true&bg_color=0D1117&rank_icon=github"/>
+</a>
+</td>
+<td width="50%">
+<a href="https://github.com/RahulRachhoya">
+<img alt="Top Languages" src="https://github-readme-stats-git-masterrstaa-rickstaa-vercel.app/api/top-langs/?username=RahulRachhoya&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&langs_count=8"/>
+</a>
+</td>
+</tr>
+</table>
+
+<br/>
+
+<!-- Badges -->
 ![Profile Views](https://komarev.com/ghpvc/?username=RahulRachhoya&style=for-the-badge&color=00a8ff)
 ![GitHub Stars](https://img.shields.io/github/stars/RahulRachhoya?style=for-the-badge&color=gold&label=Total%20Stars)
 ![GitHub Followers](https://img.shields.io/github/followers/RahulRachhoya?style=for-the-badge&color=9b59b6&label=Followers)
-![Repositories](https://img.shields.io/badge/dynamic/json?color=00a8ff&label=Repositories&style=for-the-badge&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FRahulRachhoya)
 
-<br/>
+<br/><br/>
 
 ### 🏆 Contribution Activity
 
