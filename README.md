@@ -61,30 +61,18 @@ I'm a passionate **Full Stack Developer** and **AI Engineer** based in India wit
 
 <div align="center">
 
-<!-- Note: Using raw.githubusercontent.com fallback URLs for reliability -->
-<!-- If stats don't load, consider deploying your own: https://github.com/anuraghazra/github-readme-stats -->
+<!-- GitHub Stats using shields.io - more reliable than external services -->
 
-<table>
-<tr>
-<td width="50%">
-<a href="https://github.com/RahulRachhoya">
-<img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=RahulRachhoya&show_icons=true&count_private=true&theme=github_dark&hide_border=true&bg_color=0D1117"/>
-</a>
-</td>
-<td width="50%">
-<a href="https://github.com/RahulRachhoya">
-<img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RahulRachhoya&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&langs_count=8"/>
-</a>
-</td>
-</tr>
-</table>
+![Profile Views](https://komarev.com/ghpvc/?username=RahulRachhoya&style=for-the-badge&color=00a8ff)
+![GitHub Stars](https://img.shields.io/github/stars/RahulRachhoya?style=for-the-badge&color=gold&label=Total%20Stars)
+![GitHub Followers](https://img.shields.io/github/followers/RahulRachhoya?style=for-the-badge&color=9b59b6&label=Followers)
+![Repositories](https://img.shields.io/badge/dynamic/json?color=00a8ff&label=Repositories&style=for-the-badge&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FRahulRachhoya)
 
 <br/>
 
-<!-- Activity Graph - More reliable than streak stats -->
-<a href="https://github.com/RahulRachhoya">
-<img alt="GitHub Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=RahulRachhoya&theme=github-compact&hide_border=true&bg_color=0D1117"/>
-</a>
+### 🏆 Contribution Activity
+
+[![Rahul's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=RahulRachhoya&theme=github-compact&hide_border=true&bg_color=0D1117&color=00a8ff&line=00a8ff&point=FFFFFF)](https://github.com/RahulRachhoya)
 
 </div>
 
