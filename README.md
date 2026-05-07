@@ -188,6 +188,9 @@ I'm a passionate **Full Stack Developer** and **AI Engineer** based in India wit
 
 ---
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
 <!-- Achievements Section -->
 ## 🏆 GitHub Achievements
 

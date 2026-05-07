@@ -1,27 +1,53 @@
-name: WakaTime Readme
+name: 🕐 WakaTime Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Daily at midnight
+    - cron: "0 */3 * * *"  # Every 3 hours
   workflow_dispatch:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   update-readme:
-    name: Update README with WakaTime stats
+    name: 📊 Update WakaTime Stats
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: athul/waka-readme@master
+      - name: ⬇️ Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ⏱️ Generate WakaTime Stats
+        uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          # Uncomment the following lines to customize:
-          # SHOW_TITLE: true
-          # SECTION_NAME: waka
-          # BLOCKS: ⣀⣤⣶⣿
-          # TIME_RANGE: last_7_days
-          # SHOW_TIME: true
-          # SHOW_TOTAL: true
-          # COMMIT_MESSAGE: "⏳ Update WakaTime stats"
-        # This workflow will add a section with your coding activity from WakaTime
-        # To enable: Sign up at https://wakatime.com, add API key to secrets
+          SHOW_TITLE: true
+          SECTION_NAME: waka
+          BLOCKS: ⣀⣤⣶⣿
+          TIME_RANGE: last_7_days
+          SHOW_TIME: true
+          SHOW_TOTAL: true
+          COMMIT_MESSAGE: "⏳ Update WakaTime coding stats [skip ci]"
+          # COMMIT_MESSAGE: "⏳ Update WakaTime coding stats"
+
+      - name: 💾 Push Changes (if not using waka-readme's push)
+        if: false  # Disabled - waka-readme handles commits automatically
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+          
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          git add README.md
+          git commit -m "⏳ Update WakaTime coding stats"
+          git push
