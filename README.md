@@ -60,16 +60,20 @@ I'm a passionate **Full Stack Developer** and **AI Engineer** based in India wit
 ## 📊 GitHub Analytics
 
 <div align="center">
+
+<!-- Note: Using raw.githubusercontent.com fallback URLs for reliability -->
+<!-- If stats don't load, consider deploying your own: https://github.com/anuraghazra/github-readme-stats -->
+
 <table>
 <tr>
 <td width="50%">
 <a href="https://github.com/RahulRachhoya">
-<img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=RahulRachhoya&amp;show_icons=true&amp;count_private=true&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=0D1117&amp;rank_icon=github"/>
+<img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=RahulRachhoya&show_icons=true&count_private=true&theme=github_dark&hide_border=true&bg_color=0D1117"/>
 </a>
 </td>
 <td width="50%">
 <a href="https://github.com/RahulRachhoya">
-<img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RahulRachhoya&amp;layout=compact&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=0D1117&amp;langs_count=8"/>
+<img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=RahulRachhoya&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&langs_count=8"/>
 </a>
 </td>
 </tr>
@@ -77,9 +81,9 @@ I'm a passionate **Full Stack Developer** and **AI Engineer** based in India wit
 
 <br/>
 
-<!-- GitHub Streak Stats -->
+<!-- Activity Graph - More reliable than streak stats -->
 <a href="https://github.com/RahulRachhoya">
-<img alt="GitHub Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=RahulRachhoya&amp;theme=github-dark-blue&amp;hide_border=true&amp;background=0D1117"/>
+<img alt="GitHub Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=RahulRachhoya&theme=github-compact&hide_border=true&bg_color=0D1117"/>
 </a>
 
 </div>
@@ -151,25 +155,26 @@ No activity tracked
 ## 🚀 Featured Projects
 
 <div align="center">
-<table>
-<tr>
-<td width="33%">
-<a href="https://github.com/RahulRachhoya/tradekit">
-<img alt="tradekit" src="https://github-readme-stats.vercel.app/api/pin/?username=RahulRachhoya&amp;repo=tradekit&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=0D1117"/>
-</a>
-</td>
-<td width="33%">
-<a href="https://github.com/RahulRachhoya/ai_agent_os">
-<img alt="ai_agent_os" src="https://github-readme-stats.vercel.app/api/pin/?username=RahulRachhoya&amp;repo=ai_agent_os&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=0D1117"/>
-</a>
-</td>
-<td width="33%">
-<a href="https://github.com/RahulRachhoya/spot-price-aggregator">
-<img alt="spot-price-aggregator" src="https://github-readme-stats.vercel.app/api/pin/?username=RahulRachhoya&amp;repo=spot-price-aggregator&amp;theme=github_dark&amp;hide_border=true&amp;bg_color=0D1117"/>
-</a>
-</td>
-</tr>
-</table>
+
+### **[tradekit](https://github.com/RahulRachhoya/tradekit)** — Financial Trading Platform
+> Zero-cost trading infrastructure with real-time market data
+- **Tech:** TypeScript, Deno, Supabase, Redis, WebSocket
+- ⭐ Real-time price feeds · Order execution · Risk management
+
+---
+
+### **[ai_agent_os](https://github.com/RahulRachhoya/ai_agent_os)** — Multi-Agent AI Platform
+> AI-powered freelance automation for Indian market
+- **Tech:** Python, LangGraph, CrewAI, AWS Bedrock, Django
+- 🤖 Multi-agent orchestration · HITL workflows · ₹ pricing
+
+---
+
+### **[spot-price-aggregator](https://github.com/RahulRachhoya/spot-price-aggregator)** — Price Data Service
+> Aggregated spot price feeds from multiple exchanges
+- **Tech:** TypeScript, Deno, WebSocket APIs
+- 📊 Binance · Coinbase · Real-time aggregation
+
 </div>
 
 ---
