@@ -1,3 +1,5 @@
+<!-- TIMESTAMP:2024-01-01T00:00:00Z -->
+
 <div align="center">
   
   <!-- Animated Header -->
@@ -24,12 +26,16 @@
   <!-- Profile Views & Stats -->
   <br><br>
   <img src="https://komarev.com/ghpvc/?username=RahulRachhoya&style=for-the-badge&color=00a8ff&label=VIEWS" alt="Profile Views"/>
+  <img src="https://img.shields.io/github/stars/RahulRachhoya?style=for-the-badge&color=gold&label=STARS" alt="Total Stars"/>
   <img src="https://img.shields.io/badge/Open%20Source%20Contributor-%E2%9C%93-success?style=for-the-badge" alt="Open Source"/>
   <img src="https://img.shields.io/badge/Available%20for%20Hire-%E2%9C%93-green?style=for-the-badge" alt="Hire"/>
 
 </div>
 
 ---
+
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
 
 <!-- About Section -->
 ## 👨‍💻 About Me
@@ -85,11 +91,14 @@ I'm a passionate **Full Stack Developer** and **AI Engineer** based in India wit
 
 ---
 
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
 <!-- GitHub Stats Section -->
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=RahulRachhoya&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=RahulRachhoya&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&count_private=true&include_all_commits=true&hide=issues" alt="GitHub Stats" />
   <img width="49%" src="https://github-readme-streak-stats.herokuapp.com/?user=RahulRachhoya&theme=github_dark&hide_border=true&background=0D1117" alt="GitHub Streak" />
 </div>
 
@@ -173,6 +182,12 @@ I'm a passionate **Full Stack Developer** and **AI Engineer** based in India wit
 
 ---
 
+<!-- Blog Posts Section (Auto-updated weekly) -->
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+---
+
 <!-- Achievements Section -->
 ## 🏆 GitHub Achievements
 
@@ -209,7 +224,6 @@ I'm always open to interesting conversations, project collaborations, and opport
 
 ---
 
-<!-- Footer -->
 <div align="center">
 
   ![Snake animation](https://github.com/RahulRachhoya/RahulRachhoya/blob/output/github-contribution-grid-snake.svg)
@@ -223,4 +237,6 @@ I'm always open to interesting conversations, project collaborations, and opport
 
 <div align="center">
   <sub>Built with ❤️ and ☕ by Rahul Rachhoya</sub>
+  <br>
+  <sub>🤖 Auto-updated by GitHub Actions · Last refresh: <span id="last-updated">See timestamp in source</span></sub>
 </div>

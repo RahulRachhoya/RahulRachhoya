@@ -1,0 +1,204 @@
+name: 🚀 Dynamic README Updater
+
+on:
+  schedule:
+    - cron: "0 */1 * * *"  # Run every hour for frequent updates
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  issues:
+    types: [opened, closed, reopened]
+  pull_request:
+    types: [opened, closed, reopened, synchronize]
+  release:
+    types: [published]
+  watch:
+    types: [started]
+  fork:
+  create:
+  delete:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-readme:
+    name: 📋 Update Dynamic Content
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: ⬇️ Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📊 Fetch GitHub Activity & Stats
+        id: activity
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: RahulRachhoya
+        run: |
+          echo "🎯 Fetching GitHub activity for $USERNAME..."
+          
+          # Get recent public events
+          EVENTS=$(curl -s -L \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/users/$USERNAME/events/public?per_page=20")
+          
+          # Get repositories
+          REPOS=$(curl -s -L \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Api-Version: 2022-11-28" \
+            "https://api.github.com/users/$USERNAME/repos?per_page=100&sort=updated")
+          
+          # Calculate stats
+          TOTAL_STARS=$(echo "$REPOS" | jq -r '[.[].stargazers_count] | add // 0')
+          TOTAL_FORKS=$(echo "$REPOS" | jq -r '[.[].forks_count] | add // 0')
+          REPO_COUNT=$(echo "$REPOS" | jq 'length')
+          
+          echo "total_stars=$TOTAL_STARS" >> $GITHUB_OUTPUT
+          echo "total_forks=$TOTAL_FORKS" >> $GITHUB_OUTPUT
+          echo "repo_count=$REPO_COUNT" >> $GITHUB_OUTPUT
+          echo "EVENTS_DATA<<EOF" >> $GITHUB_ENV
+          echo "$EVENTS"
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: 📝 Update Activity Section
+        id: update_activity
+        run: |
+          node << 'NODE_SCRIPT'
+          const fs = require('fs');
+          
+          const events = JSON.parse(process.env.EVENTS_DATA || '[]');
+          const now = new Date();
+          const readableTime = now.toUTCString();
+          
+          let activityText = [];
+          
+          events.slice(0, 8).forEach(event => {
+            const date = new Date(event.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            const repo = event.repo.name;
+            const repoUrl = `https://github.com/${repo}`;
+            
+            switch(event.type) {
+              case 'PushEvent':
+                const commits = event.payload?.commits?.length || 1;
+                activityText.push(`⚡ Pushed ${commits} commit${commits > 1 ? 's' : ''} to [${repo}](${repoUrl}) — ${date}`);
+                break;
+              case 'CreateEvent':
+                activityText.push(`📦 Created ${event.payload.ref_type} in [${repo}](${repoUrl}) — ${date}`);
+                break;
+              case 'IssuesEvent':
+                const action = event.payload.action === 'opened' ? 'opened 📋' : event.payload.action === 'closed' ? 'closed ✅' : 'updated 📝';
+                activityText.push(`🐛 ${action} issue in [${repo}](${repoUrl}) — ${date}`);
+                break;
+              case 'PullRequestEvent':
+                const prAction = event.payload.action === 'opened' ? 'opened 🔀' : event.payload.action === 'closed' ? 'closed 🎉' : event.payload.action === 'merged' ? 'merged ✅' : 'updated 📝';
+                activityText.push(`🔀 ${prAction} PR in [${repo}](${repoUrl}) — ${date}`);
+                break;
+              case 'ForkEvent':
+                activityText.push(`🍴 Forked [${repo}](${repoUrl}) — ${date}`);
+                break;
+              case 'WatchEvent':
+                activityText.push(`⭐ Starred [${repo}](${repoUrl}) — ${date}`);
+                break;
+              case 'ReleaseEvent':
+                activityText.push(`🚀 Published release in [${repo}](${repoUrl}) — ${date}`);
+                break;
+              case 'PullRequestReviewEvent':
+                activityText.push(`👀 Reviewed PR in [${repo}](${repoUrl}) — ${date}`);
+                break;
+            }
+          });
+          
+          let readme = fs.readFileSync('README.md', 'utf8');
+          
+          // Update timestamp
+          const timestamp = new Date().toISOString();
+          readme = readme.replace(/<!-- TIMESTAMP:.*?-->/, `<!-- TIMESTAMP:${timestamp}-->`);
+          
+          // Update activity section
+          const activityContent = activityText.length > 0 
+            ? activityText.map(item => `- ${item}`).join('\n')
+            : '> 🎯 No recent public activity. Check back soon!';
+          
+          const newSection = `<!--START_SECTION:activity-->
+## 🔥 Recent Activity
+
+${activityContent}
+
+<em>Last updated: ${readableTime}</em>
+<!--END_SECTION:activity-->`;
+          
+          readme = readme.replace(/<!--START_SECTION:activity-->.*?<!--END_SECTION:activity-->/s, newSection);
+          
+          // Update last refresh time
+          readme = readme.replace(
+            /Last refresh:.*?<\/span>/g, 
+            `Last refresh: ${readableTime}</span>`
+          );
+          
+          fs.writeFileSync('README.md', readme);
+          console.log('✅ Activity section updated!');
+          NODE_SCRIPT
+
+      - name: 🔄 Update Stats Badges
+        run: |
+          node << 'NODE_SCRIPT'
+          const fs = require('fs');
+          
+          let readme = fs.readFileSync('README.md', 'utf8');
+          
+          const totalStars = "${{ steps.activity.outputs.total_stars }}";
+          
+          // Update stars badge
+          readme = readme.replace(
+            /https:\/\/img\.shields\.io\/github\/stars\/RahulRachhoya[^?)]*/,
+            `https://img.shields.io/github/stars/RahulRachhoya?style=for-the-badge&color=gold&label=STARS`
+          );
+          
+          fs.writeFileSync('README.md', readme);
+          NODE_SCRIPT
+
+      - name: 🐍 Generate Contribution Snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: RahulRachhoya
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: 📦 Push Snake to Output Branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 💾 Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+          
+          # Check if README.md was modified
+          if [ -n "$(git diff --ignore-submodules --exit-code README.md)" ]; then
+            git add README.md
+            git commit -m "🤖 Auto-update: Activity feed + Stats [$(date +%Y-%m-%d)]"
+            git push
+            echo "✅ Changes pushed successfully!"
+          else
+            echo "ℹ️ No changes detected, skipping commit"
+          fi

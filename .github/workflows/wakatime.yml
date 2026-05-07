@@ -1,0 +1,27 @@
+name: WakaTime Readme
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Daily at midnight
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    name: Update README with WakaTime stats
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          # Uncomment the following lines to customize:
+          # SHOW_TITLE: true
+          # SECTION_NAME: waka
+          # BLOCKS: ⣀⣤⣶⣿
+          # TIME_RANGE: last_7_days
+          # SHOW_TIME: true
+          # SHOW_TOTAL: true
+          # COMMIT_MESSAGE: "⏳ Update WakaTime stats"
+        # This workflow will add a section with your coding activity from WakaTime
+        # To enable: Sign up at https://wakatime.com, add API key to secrets
