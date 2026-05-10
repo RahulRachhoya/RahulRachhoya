@@ -35,11 +35,11 @@
 ---
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#37832](https://github.com/is-a-dev/register/pull/37832) in [is-a-dev/register](https://github.com/is-a-dev/register)
-2. ❌ Merged PR [#1](https://github.com/RahulRachhoya/rahulrachhoya.github.io/pull/1) in [RahulRachhoya/rahulrachhoya.github.io](https://github.com/RahulRachhoya/rahulrachhoya.github.io)
-3. 💪 Opened PR [#1](https://github.com/RahulRachhoya/rahulrachhoya.github.io/pull/1) in [RahulRachhoya/rahulrachhoya.github.io](https://github.com/RahulRachhoya/rahulrachhoya.github.io)
-4. 💪 Opened PR [#7416](https://github.com/refinedev/refine/pull/7416) in [refinedev/refine](https://github.com/refinedev/refine)
-5. 💪 Opened PR [#7415](https://github.com/refinedev/refine/pull/7415) in [refinedev/refine](https://github.com/refinedev/refine)
+1. ❌ Merged PR [#37832](https://github.com/is-a-dev/register/pull/37832) in [is-a-dev/register](https://github.com/is-a-dev/register)
+2. 💪 Opened PR [#37832](https://github.com/is-a-dev/register/pull/37832) in [is-a-dev/register](https://github.com/is-a-dev/register)
+3. ❌ Merged PR [#1](https://github.com/RahulRachhoya/rahulrachhoya.github.io/pull/1) in [RahulRachhoya/rahulrachhoya.github.io](https://github.com/RahulRachhoya/rahulrachhoya.github.io)
+4. 💪 Opened PR [#1](https://github.com/RahulRachhoya/rahulrachhoya.github.io/pull/1) in [RahulRachhoya/rahulrachhoya.github.io](https://github.com/RahulRachhoya/rahulrachhoya.github.io)
+5. 💪 Opened PR [#7416](https://github.com/refinedev/refine/pull/7416) in [refinedev/refine](https://github.com/refinedev/refine)
 <!--END_SECTION:activity-->
 
 <!-- About Section -->
