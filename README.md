@@ -68,12 +68,12 @@ Currently at **Careers360** (India's largest career platform, 15M+ users/month) 
 
 | Project | Description | Stack |
 |---------|-------------|-------|
-| [Voice-Calling-Agent](https://github.com/RahulRachhoya/Voice-Calling-Agent) | Real-time voice AI agent for automated calls | Python · LLM · STT/TTS |
-| [MedicalChatbot](https://github.com/RahulRachhoya/MedicalChatbot) | RAG-powered medical Q&A chatbot | LangChain · RAG · LLM |
-| [AudioMuse-AI](https://github.com/RahulRachhoya/AudioMuse-AI) | Self-hosted AI music playlist generator | Python · GenAI · Docker |
-| [PromptForge](https://github.com/RahulRachhoya/PromptForge) | LLM prompt engineering toolkit | TypeScript · LLM |
-| [SQL.Query.Extractor](https://github.com/RahulRachhoya/SQL.Query.Extractor) | Natural language to SQL using LLMs | Python · LLM |
-| [Machine-Learning](https://github.com/RahulRachhoya/Machine-Learning) | ML projects: classification, clustering, regression | Python · scikit-learn |
+| [Voice-Calling-Agent](https://github.com/RahulRachhoya/Voice-Calling-Agent) | Real-time voice AI agent — STT, LLM reasoning, TTS for automated calls | Python · LLM · STT/TTS · FastAPI |
+| [MedicalChatbot](https://github.com/RahulRachhoya/MedicalChatbot) | RAG-powered medical Q&A chatbot grounded in verified knowledge | LangChain · RAG · pgvector · LLM |
+| [PromptForge](https://github.com/RahulRachhoya/PromptForge) | AI prompt engineering toolkit — craft, test, A/B evaluate LLM prompts | TypeScript · LLM · Multi-model |
+| [SQL.Query.Extractor](https://github.com/RahulRachhoya/SQL.Query.Extractor) | Natural language to SQL using LLMs — complex joins, aggregations | Python · LLM · FastAPI |
+| [AudioMuse-AI](https://github.com/RahulRachhoya/AudioMuse-AI) | Self-hosted AI music playlist generator with Dockerized deployment | Python · GenAI · Docker |
+| [Machine-Learning](https://github.com/RahulRachhoya/Machine-Learning) | ML projects: supervised/unsupervised learning, feature engineering | Python · scikit-learn |
 
 ---
 
